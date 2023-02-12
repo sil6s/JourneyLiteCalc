@@ -1,0 +1,52 @@
+
+       _                                     _      _ _       
+      | |                                   | |    (_) |      
+      | | ___  _   _ _ __ _ __   ___ _   _  | |     _| |_ ___ 
+  _   | |/ _ \| | | | '__| '_ \ / _ \ | | | | |    | | __/ _ \
+ | |__| | (_) | |_| | |  | | | |  __/ |_| | | |____| | ||  __/
+  \____/ \___/ \__,_|_|  |_| |_|\___|\__, | |______|_|\__\___|
+                                      __/ |                   
+                                     |___/                    
+
+
+	Journey Lite Weight Loss Metrics (Version 1.0 / 2/11/2023)
+
+This Java code is a patient metric calculator, where users can input their height, weight, age, and gender to receive a summary of their results. The code first creates a Scanner object to read inputs from the user and then displays a welcome message. The user inputs their height, weight, and age, with the code checking that each value is greater than 0. The user then inputs their gender as either 'M' or 'F'. The code calculates the patient's starting Body Mass Index (BMI), today's BMI, ideal weight, and a variety of other metrics including BEE (Basal Energy Expenditure), fluid goal, excess weight loss percentage, protein goal, and others. The code also determines whether the patient has lost or gained weight and displays the results in a console output. The code rounds off some of the results to a single decimal place and provides a brief interpretation of the patient's BMI results.
+
+	
+	HOW TO USE:
+
+1. Open the downloaded folder "JourneyLite Calc". 
+2. Click on the file(shortcut) named "Journey Lite Metrics"
+3. Once you have clicked on the shortcut"Journey Lite Metrics", the program will open in a terminal window.
+4. Enter all patient information.
+5. Once you have received results, you will be asked if you would like to download the results. Type "y" to download and "n" to not download. The results will be downloaded as a .txt (text) file. 
+
+
+	Requirement To Run:
+
+-To run this program you must have the Java Runtime Enviroment or Java Developer Kit installed. To download the latest Java version please visit: https://www.java.com/en/download/manual.jsp
+
+
+6. To view these results, please visit the file folder for this program.
+
+	Formulas Used:
+*In Java, the "double" keyword is used to declare a variable as a decimal number. Decimal numbers are numbers with fractional parts, such as 3.14 (Pi) or 0.5 (one half).
+By putting "double" before a variable name, the programmer is telling the computer that the variable will be used to store decimal numbers and to reserve enough memory to store those decimal values.
+
+    double weightLost = weight-todayWeight;
+    double bmi = weight * 703 / (height * height);
+    double bee = 0;
+    double newBee = 0;
+    double currentBmi = todayWeight * 703 / (height*height);
+    double idealWeight = 110+(height-60)*5.06;
+    double excessWeightLossPercent = (weightLost / weight) * 100;
+    double excessBodyWeight = weight-idealWeight;
+    double goalWeight = todayWeight-(0.75*excessBodyWeight);
+    double fluidGoal = (goalWeight / 2.2)*30;
+    double ebwl = (weightLost/excessBodyWeight)*100;
+    double proteinGoal = 0;
+
+
+
+
